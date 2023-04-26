@@ -1,7 +1,7 @@
 import React from "react";
 
-import Login from "./components/Login";
-import { Task } from "./Task";
+// import Login from "./components/Login";
+import { Home } from "./Home";
 import { Route, Link, Routes, BrowserRouter } from "react-router-dom";
 import { Axios } from "axios";
 function App() {
@@ -14,7 +14,7 @@ function App() {
         </Routes>
       </BrowserRouter> */}
       {/* <Axios /> */}
-      <Task />
+      <Home />
     </div>
   );
 }

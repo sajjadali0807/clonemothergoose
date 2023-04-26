@@ -14,7 +14,7 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import image1 from "./assets/mg logo.png";
 
-export const Task = () => {
+export const Home = () => {
   const [age, setAge] = React.useState("");
 
   const handleChange = (event) => {
