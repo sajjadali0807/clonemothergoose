@@ -6,13 +6,13 @@ import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-import "./css/Dashboard.css";
+import '../css/Dashboard.css'
 import Box from "@mui/material/Box";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-import image1 from "./assets/mg logo.png";
+import image1 from "../assets/mg logo.png";
 
 export const Home = () => {
   const [age, setAge] = React.useState("");

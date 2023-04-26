@@ -1,20 +1,20 @@
 import React from "react";
 
 // import Login from "./components/Login";
-import { Home } from "./Home";
+
 import { Route, Link, Routes, BrowserRouter } from "react-router-dom";
 import { Axios } from "axios";
+import { Home } from "./components/Home";
+import { Login } from "./components/Login";
 function App() {
   return (
     <div className="App">
-      {/* <BrowserRouter>
+      <BrowserRouter>
         <Routes>
           <Route path="/" exact element={<Login />} />
-          <Route path="/Task" element={<Task />} />
+          <Route path="/Home" element={<Home />} />
         </Routes>
-      </BrowserRouter> */}
-      {/* <Axios /> */}
-      <Home />
+      </BrowserRouter>
     </div>
   );
 }
