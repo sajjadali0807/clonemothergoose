@@ -1,0 +1,15 @@
+.DateCard{
+    /* background-color: rgb(235, 175, 230); */
+    display: flex;
+    justify-content: center;
+    background-image: url("../assets/mgbg.png");
+    padding-bottom: 100px;
+}
+.heading{
+    text-align: center;
+}
+
+.imgage1 img {
+    height: 50px;
+    
+}
