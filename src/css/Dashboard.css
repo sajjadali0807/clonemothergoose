@@ -1,3 +1,9 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    
+}
+
 .DateCard{
     /* background-color: rgb(235, 175, 230); */
     display: flex;
@@ -12,4 +18,17 @@
 .imgage1 img {
     height: 50px;
     
+}
+
+.logincard{
+
+    margin-left: auto;
+    margin-right: auto;
+}
+/* .col-lg-6 img{
+    width: max-content;
+    object-fit: contain;
+} */
+#baby{
+    width: 100%;
 }

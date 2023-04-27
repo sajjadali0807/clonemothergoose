@@ -9,6 +9,7 @@ import { useFormik } from "formik";
 import * as yup from "yup";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import "../css/Dashboard.css";
 
 export const Login = () => {
   const navigate = useNavigate();
@@ -32,9 +33,12 @@ export const Login = () => {
     onSubmit: (values) => {
       console.log(values);
       // values.preventDefault();
-     
+
       axios
-        .post("https://reportsapi.mothergoosehealth.com/report/api/login", values)
+        .post(
+          "https://reportsapi.mothergoosehealth.com/report/api/login",
+          values
+        )
         .then((e) => {
           navigate("/Home");
           console.log("dgfhdgf", e);
@@ -44,51 +48,70 @@ export const Login = () => {
     },
   });
   return (
-    <Card sx={{ maxWidth: 345, marginTop: 18 }}>
-    <CardContent>
-      <div style={{ textAlign: "center" }}>
-        <img src={topimg} width={100} height={100} alt="logo" />
-        <h3>Log In</h3>
-      </div>
-    </CardContent>
-    <Stack>
-      <TextField
-        id="standard-basic"
-        style={{ margin: "10px" }}
-        label="User Name"
-        variant="standard"
-        required
-        type="text"
-        name="username"
-        placeholder="Name"
-        value={formik.values.username}
-        onChange={formik.handleChange}
-        helperText={formik.touched.username ? formik.errors.username : null}
-        error={formik.touched.username ? formik.errors.username : null}
-      />
+    <>
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-6">
+            <img id="baby" src={require("../assets/newedwer (1).jpg")} alt="" />
+          </div>
+          <div className="col-lg-6">
+            <Card sx={{ maxWidth: 345, marginTop: 18, textAlign: "center" }}>
+              <CardContent>
+                <div style={{ textAlign: "center" }}>
+                  <img src={topimg} width={100} height={100} alt="logo" />
+                  <h3>Log In</h3>
+                </div>
+              </CardContent>
+              <Stack>
+                <TextField
+                  id="standard-basic"
+                  style={{ margin: "10px" }}
+                  label="User Name"
+                  variant="standard"
+                  required
+                  type="text"
+                  name="username"
+                  placeholder="Name"
+                  value={formik.values.username}
+                  onChange={formik.handleChange}
+                  helperText={
+                    formik.touched.username ? formik.errors.username : null
+                  }
+                  error={
+                    formik.touched.username ? formik.errors.username : null
+                  }
+                />
 
-      <TextField
-        id="standard-basic"
-        style={{ margin: "10px" }}
-        label="Password"
-        variant="standard"
-        required
-        type="password"
-        name="password"
-        placeholder="Name"
-        value={formik.values.password}
-        onChange={formik.handleChange}
-        helperText={formik.touched.password ? formik.errors.password : null}
-        error={formik.touched.password ? formik.errors.password : null}
-      />
-      <Button
-        variant="contained"
-        style={{ margin: "40px 80px", borderRadius: "25px" }}
-        onClick={formik.handleSubmit}
-      >
-        LogIn
-      </Button>
-    </Stack>
-  </Card>
-  )
-}
+                <TextField
+                  id="standard-basic"
+                  style={{ margin: "10px" }}
+                  label="Password"
+                  variant="standard"
+                  required
+                  type="password"
+                  name="password"
+                  placeholder="Name"
+                  value={formik.values.password}
+                  onChange={formik.handleChange}
+                  helperText={
+                    formik.touched.password ? formik.errors.password : null
+                  }
+                  error={
+                    formik.touched.password ? formik.errors.password : null
+                  }
+                />
+                <Button
+                  variant="contained"
+                  style={{ margin: "40px 80px", borderRadius: "25px" }}
+                  onClick={formik.handleSubmit}
+                >
+                  LogIn
+                </Button>
+              </Stack>
+            </Card>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
